@@ -1,12 +1,10 @@
-const apikey = "171ebf2d968bba22d8b8fafbcf4713fe";
-
+apikey = "668c962f5577e05bd4166493d270799e";
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const ptemp = document.getElementById('temp');
 const pdesc = document.getElementById('desc');
 const hname = document.getElementById('name');
 const maxmin = document.getElementById('maxmin');
-const icon = document.getElementById('image');
 let date = document.querySelector('.date');
 
 
@@ -19,7 +17,6 @@ async function getWeatherByLocation(city) {
 
     console.log(respData);
     addWeather(respData);
-
 }
 
 function KtoC(K) {
@@ -27,10 +24,8 @@ function KtoC(K) {
 }
 
 function addWeather(data) {
-    ptemp.innerText = KtoC(data.main.temp) + "°C";
+    ptemp.innerText = KtoC(data.main.temp) + "°";
     hname.innerText = data.name + ", " + data.sys.country;
-    icon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
-    icon.width = "100";
     pdesc.innerText = data.weather[0].description;
     maxmin.innerText = KtoC(data.main.temp_min)+"/"+KtoC(data.main.temp_max);
 

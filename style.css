@@ -7,27 +7,30 @@ body{
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    background-color: #272532;
 }
-
-body::before{
-    content: "";
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: url(back.jpg) center center/cover;
-    opacity: 0.5;
-    z-index: -1;
-    align-self: center;
-}
-
 #form{
-    padding: 100px 0px;
+    padding: 20px 0px;
+    
 }
 .card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 30px;
+    color: #fff;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+.card::before{
+    content: '';
+    background: rgba(0, 0, 0, 0.1) url(back.jpg) center center/cover;
+    opacity: 0.5;
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+    position: absolute;
 }
 .temp{
     display: flex;
@@ -40,13 +43,13 @@ body::before{
     
 }
 .name{
-    font-size: 2.0rem;
+    font-size: 1.0rem;
     font-family: 'Baloo Bhai 2', cursive;
-    
+    padding: 20px 0px;
 }
 #search{
-    border-radius: 10px 0px 10px 0px;
-    border: 2px solid #000;
+    border-radius: 10px;
+    border: 2px solid #fff;
     padding: 10px;
     font-size: 1.0rem;
     font-weight: bold;
@@ -54,6 +57,8 @@ body::before{
     padding: 10px;
     width: 200px;
     font-weight: bold;
+    background: transparent;
+    color: #fff;
 }
 #search:focus{
     outline: none;
